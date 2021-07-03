@@ -4,13 +4,20 @@ from typing import AsyncGenerator
 
 
 
-
-colors = {
-	"WARNING" : '\033[93m',
-	"ERROR" : '\033[91m',
-	"NONE": '\033[0m',
-	"SUCCESS": "\033[1;32m",
-}
+if os.name != "nt":
+	colors = {
+		"WARNING" : '\033[93m',
+		"ERROR" : '\033[91m',
+		"NONE": '\033[0m',
+		"SUCCESS": '\033[1;32m',
+	}
+else:
+	colors = {
+		"WARNING" : '',
+		"ERROR" : '',
+		"NONE": '',
+		"SUCCESS": '',
+	}
 
 TOKENTYPES = [
 	"INT",
