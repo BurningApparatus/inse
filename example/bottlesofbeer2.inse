@@ -1,0 +1,31 @@
+# address 0 is bottles #
+set /99/ &0&.
+
+# main loop of the program #
+
+set [
+	out &0&.
+	out [ bottles of beer on the wall \n].
+	out &0&.
+	out [ bottles of beer\n].
+	out [take one down, pass it around\n].
+	
+	# subtraction #
+	sub &0& /1/ &0&.
+	
+	out &0&.
+	out [ bottles of beer on the wall \n \n].
+
+	# test to see whether we are at 0 #
+
+	# sign function will return 1 if we are not at 0, and 0 if we are (it will also turn negative if beer is negative but it should never be)#
+	sgn &0& &1&.
+
+	# multiply ourselves by the signed number, if we are 0, it will delete ourselves, it not nothing will happen #
+	mul &10& &1& &10&.
+	run &10&.
+
+] &10&. # main loop is at address 10 #
+
+run &10&.
+dun.

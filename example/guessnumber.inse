@@ -1,0 +1,34 @@
+# inse does not support random numbers so ill just use 47 #
+
+set /47/ &0&.
+
+set [
+	
+	out [guess the number: ].
+
+	inp &1& /00/.
+
+	# now, we subtract that number from the guessed number, if it is larger, it would be positive, if it is smaller, it would be negative #
+	sub &1& &0& &2&.
+
+	# standard sign stuff #
+	sgn &2& &3&.
+
+	mul &20& &3& &21&.
+	run &21&.
+	out [you guessed it!].
+	dun.
+] &10&.
+
+
+# this is our code that determins whether it is greater or smaller #
+set [
+	out [too big! \n].
+	run &10&.
+
+	out [too small! \n].
+] &20&.
+
+run &10&.
+
+dun.

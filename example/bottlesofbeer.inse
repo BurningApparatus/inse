@@ -1,0 +1,22 @@
+set /99/ &00&.
+set [
+	out &00&.
+	out [ bottles of beer on the wall \n].
+	out &00&.
+	out [ bottles of beer. \n].
+	out [take one down, pass it around \n].
+
+	sub &00& /1/ &00&.
+	out &00&.
+	out [ bottles of beer on the wall \n].
+
+	out [\n].
+
+] &10&.
+
+
+
+
+mul &10& /99/ &10&.
+run &10&.
+dun.
