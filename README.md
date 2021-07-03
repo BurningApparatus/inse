@@ -38,7 +38,7 @@ dun.
 
 ## Install
 ```
-git clone https://github.com/BurningApparatus/inse
+git clone https://github.com/BurningApparatus/inse.git
 cd inse
 python main.py example/test.inse
 ```
@@ -46,9 +46,9 @@ python main.py example/test.inse
 ## Better Description
 Inse is an esolang with no present loops or if statements. Code can be stored within "strings" or "blocks" which can be stored in memory. These strings can be run and edited through addition, subtraction and multiplication in order to change how the code is run. These interactions with the code allow for control flow. Im 90% sure its turing complete.
 
-As you have probably noticed, the syntax is very simple, and not at all user friendly (because I'm not too great at writing interpreters). But I can argue that this is an esolang and i can make it as user unfriendly as possible.
+As you have probably noticed, the syntax is very simple, and not at all user friendly (because I'm not too great at writing interpreters). But I can argue that this is an esolang and I can make it as user unfriendly as I want.
 
-For one, there are no variables, but you write directly to an array of memory. This is because ~~im lazy~~ the most popular esolangs use a stack or tape, and I wanted to innovate.
+For one, there are no variables, but you write directly to an array of memory. This is not becayse I'm lazy, but because the most popular esolangs use a stack or tape, and I wanted to innovate.
 Also, commands cannot be nested. I think you can guess why at this point.
 
 All commands must end in a full stop, otherwise you will get a confusing error message.
@@ -56,12 +56,15 @@ Did i mention that the error handling is terrible as well? May have neglected th
 
 I also wrote the interpreter in 2 days so that may explain a lot (feel free to rewrite a better version)
 
+I also really needed to put this somewhere, but the code itself is stored in address 99, so any inse program can become a quine if you add `out &99&` to the end :) 
+
 ## Documentation
 Proceed with caution
 ### Data types
 * Integer - defined between forward slashes e.g `/150/` `/13/` `/-36/` `/+4731/`
 * String - defined between square brackets `[hello world]` `[set /13/ &13&]`
 * Memory address/pointer - defined between ampersands `&7&` `&35&` `&99&`
+Comments are defined in between # symbols (this can also be used for block comments). `# this is a comment #`
 
 ### Commands
 * out - out (any type)
