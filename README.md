@@ -40,7 +40,7 @@ dun.
 ```
 git clone https://github.com/BurningApparatus/inse.git
 cd inse
-python main.py example/test.inse
+python main.py example/hello_world.inse
 ```
 
 ## Better Description
